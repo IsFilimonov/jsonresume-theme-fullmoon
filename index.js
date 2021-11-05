@@ -25,8 +25,8 @@ Handlebars.registerHelper('spaceToDash', spaceToDash);
 
 
 function render(resume) {
-  const css = readFileSync(THEME, `/style.css`, 'utf-8');
-  const tpl = readFileSync(THEME, `/resume.hbs`, 'utf-8');
+  const css = readFileSync(`${THEME}/style.css`, 'utf-8');
+  const tpl = readFileSync(`${THEME}/resume.hbs`, 'utf-8');
 
   const partialsDir = join(__dirname, 'theme/partials');
   const filenames = readdirSync(partialsDir);
