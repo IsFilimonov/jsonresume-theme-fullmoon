@@ -2,6 +2,7 @@ const Handlebars = require('handlebars');
 const { readFileSync, readdirSync } = require('fs');
 const { join } = require('path');
 
+const THEME = join(__dirname, 'theme');
 const HELPERS = join(__dirname, 'theme/hbs-helpers');
 
 const { birthDate } = require(join(HELPERS, 'birth-date.js'));
@@ -24,8 +25,9 @@ Handlebars.registerHelper('spaceToDash', spaceToDash);
 
 
 function render(resume) {
-  const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
-  const tpl = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
+  const css = readFileSync(THEME, `/style.css`, 'utf-8');
+  const tpl = readFileSync(THEME, `/resume.hbs`, 'utf-8');
+
   const partialsDir = join(__dirname, 'theme/partials');
   const filenames = readdirSync(partialsDir);
 
