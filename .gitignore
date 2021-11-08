@@ -273,7 +273,6 @@ modules.xml
 
 ### Additional points ###
 bower_components/
-node_modules/
 public/
 
 resume.html

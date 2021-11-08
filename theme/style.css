@@ -80,6 +80,7 @@ output,
 ruby,
 section,
 summary,
+description,
 time,
 mark,
 audio,
@@ -323,8 +324,10 @@ section .location {
   opacity: 0;
 }
 
+.project,
 .position,
 .company,
+.roles,
 .organization,
 .institution,
 .date,
@@ -335,6 +338,7 @@ section .location {
   display: inline;
 }
 
+.project,
 .position,
 .studyType,
 .area,
@@ -351,7 +355,16 @@ section .location {
   content: "at ";
 }
 
+.roles::before {
+  content: "as "
+}
+
+.area::before {
+  content: "in "
+}
+
 .company,
+.roles,
 .institution,
 .organization,
 .awarder {
@@ -402,7 +415,7 @@ section .location {
   overflow: hidden;
 }
 
-.gpa {
+.score {
   clear: both;
   padding-bottom: 0.5em;
 }
@@ -652,6 +665,8 @@ section .location {
     transition: all 0.5s linear;
   }
   .company::before,
+  .roles::before,
+  .area::before,
   .institution::before,
   .organization::before,
   .awarder::before {
@@ -695,6 +710,9 @@ section .location {
   .organization::before,
   .awarder::before {
     content: "at ";
+  }
+  .roles::before {
+    content: "as "
   }
   .main-summary {
     padding: 0;

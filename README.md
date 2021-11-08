@@ -1,59 +1,49 @@
-# Full moon theme for JSONResume
+# Fullmoon theme for JSON Resume
 
-A fullmoon template for JSON resume based on a [StackOverflow](https://github.com/phoinixi/jsonresume-theme-stackoverflow) theme.
+A fullmoon template for [JSON Resume](https://jsonresume.org/) based on a [StackOverflow](https://github.com/phoinixi/jsonresume-theme-stackoverflow) theme.
 
 
-## Installation
+## Get ready?
+More [information](https://jsonresume.org/getting-started/) about JSON Resume start.
 
-TODO: Describe the installation process
+### Command Line Tool
+Install JSON Resume Command Line Tool globally for **NPM**:
+```bash
+npm install -g resume-cli
+```
+
+Official [CLT repository](https://github.com/jsonresume/resume-cli) with all commands.
+
+
+### Resume file
+- Create `resume.json` file according a [schema](https://jsonresume.org/schema/).
+- Hosting a file `https://registry.jsonresume.org/{your_github_username}` and choose a theme to set `{ "meta": { "theme": "elegant" } }`. 
+
+*Note*: a theme must be official register (check [dependencies](https://github.com/jsonresume/registry-functions/blob/master/functions/package.json)).
 
 
 ## Usage
 
-TODO: how to use
-
-
-## Publish
-- Create a document in the root directory:
+- Start local server from folder where the `resume.json` puts:
 ```bash
-echo "//registry.npmjs.org/:_authToken=\n//npm.pkg.github.com/:_authToken=" > .npmrc
-```
-- Fill access tokens for GitHub and NMP;
-- `npm publish` in the root.
-
-
-
-## Differences
-### Added
-- Added a work contributions block `basics->location->conditions`:
-  - `remote`: the possibility of working remotely;
-  - `relocate`: relocation consent;
-  - `businessTrips`: business trips consent;
-  - `permits`: work permit in other countries. Must be completed if additional visas or cards are available.
-```json
-{
-  "basics": {
-    "location": {
-      "conditions": {
-        "remote": true,
-        "relocate": true,
-        "businessTrips": false,
-        "permits": [
-          "RU", "GE"
-        ]
-      }
-    }
-  }
-}
+resume serve
 ```
 
-### CSS changed
-- Name and surname are bold:
-```css
-#header h1.name {
-  font-weight: 700;
-}
+- If a theme is officially register you can change a render:
+```bash
+resume serve --theme <theme name>
 ```
+
+- If you have you own theme locally, just put a `resume.json` to the root folder:
+```bash
+resume serve --theme .
+```
+
+## TODO
+- [ ] A `certificates` block.
+- [ ] `basics.location.conditions.permits`: work permit in other countries. Must be completed if additional visas or cards are available.
+- [ ] A Fullmoon-min (one page) theme for export CV in pdf and attach to the html version by a link.
+
 
 ## Contributing
 
@@ -66,14 +56,15 @@ echo "//registry.npmjs.org/:_authToken=\n//npm.pkg.github.com/:_authToken=" > .n
 
 ## History
 
-TODO: Write history
+I plan to document all the history of changes in the releases.
 
 
 ## Credits
+Thanks [Francesco Esposito](https://francesco.netlify.com/) for a great [Stack Overflow](https://github.com/phoinixi/jsonresume-theme-stackoverflow) theme!
 
-TODO: Write credits
+If you find them useful, give them ⭐a star and enjoy.
 
 
-##License
+## License
 
 [MIT license](https://github.com/IsFilimonov/jsonresume-theme-fullmoon/blob/main/LICENSE)
