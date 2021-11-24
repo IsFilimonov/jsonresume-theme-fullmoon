@@ -1,3 +1,5 @@
+<span class="jsonresume-theme-fullmoon-npmversion"><a href="https://npmjs.org/package/jsonresume-theme-fullmoon" title="View this project on NPM"><img src="https://img.shields.io/npm/v/jsonresume-theme-fullmoon.svg" alt="NPM version" /></a></span>
+
 # Fullmoon theme for JSON Resume
 
 A fullmoon template for [JSON Resume](https://jsonresume.org/) based on a [StackOverflow](https://github.com/phoinixi/jsonresume-theme-stackoverflow) theme.
