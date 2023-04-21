@@ -45,7 +45,7 @@ resume serve --theme .
 ## TODO
 - [ ] A `certificates` block.
 - [ ] `basics.location.conditions.permits`: work permit in other countries. Must be completed if additional visas or cards are available.
-- [ ] A Fullmoon-min (one page) theme for export CV in pdf and attach to the html version by a link.
+- [X] A Fullmoon-min (one page) theme for export CV in pdf and attach to the html version by a link.
 
 
 ## Contributing
