@@ -4,6 +4,7 @@
 
 A fullmoon template for [JSON Resume](https://jsonresume.org/) based on a [StackOverflow](https://github.com/phoinixi/jsonresume-theme-stackoverflow) theme.
 
+Also you can use a [Fullmoon lite](https://github.com/IsFilimonov/jsonresume-theme-fullmoon-lite) version for export as one-page variant. The design of the theme is the same, just used part of the sections.
 
 ## Get ready?
 More [information](https://jsonresume.org/getting-started/) about JSON Resume start.
